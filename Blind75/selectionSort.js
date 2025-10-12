@@ -8,9 +8,7 @@ const selectionSort =(arr)=>{
             }
         }
         //swap
-        let temp = arr[min];
-        arr[min]=arr[i]
-        arr[i]=temp;
+        [arr[i],arr[min]] = [arr[min],arr[i]];
     }
     return arr;
 }
