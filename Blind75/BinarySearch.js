@@ -21,7 +21,8 @@
     target=4;
     console.log(BinarySearch(nums,target)); // 3
 
-    // time complexity O(log n)
+    // time complexity O(log n) why  log n - because we are reducing the search space by half each time
+    // when we use logn ? when we have a sorted array and we want to find an element
     // space complexity O(1)
 
     // dry run 

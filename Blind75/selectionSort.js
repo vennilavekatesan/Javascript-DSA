@@ -19,3 +19,5 @@ console.log(selectionSort(arr)); // [11,12,22,25,64]
 
 
 // arr= [64,25,12,22,11] => [11,12,22,25,64]
+// time complexity o(n^2)
+// space complexity o(1)  because we are not using any extra space
