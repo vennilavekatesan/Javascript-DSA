@@ -13,3 +13,26 @@ function findMissingNumber(numbers){
 console.log(findMissingNumber([3,0,1])); // 2
 console.log(findMissingNumber([0,1])); // 2
 console.log(findMissingNumber([9,6,4,2,3,5,7,0,1])); // 8
+
+
+// another way using set 
+function findMissingNumber2(numbers){
+    const numSet = new Set(numbers);
+    const n= numbers.length;
+    for(let i=0; i<n; i++){
+        if(!numSet.has(i)){
+            return i;
+        }
+    }
+}
+
+console.log(findMissingNumber2([3,0,1])); // 2
+console.log(findMissingNumber2([0,1])); // 2
+console.log(findMissingNumber2([9,6,4,2,3,5,7,0,1])); // 8
+
+
+// time complexity o(n)
+// space complexity o(n) for set approach
+
+// another approach 
+ 
