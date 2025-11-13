@@ -34,10 +34,9 @@ function findFreqUsingMap(arr){
     let freqMap = {};
 
     for(let i=0; i<arr.length; i++){
-        arr[i] = (arr[i] || 0 ) +1;
-
+        freqMap[arr[i]] = (freqMap[arr[i]] || 0 ) +1;
     }
-    
+
     for(let key in freqMap){
         console.log(`Element ${key} occurs ${freqMap[key]} times`);
     }
