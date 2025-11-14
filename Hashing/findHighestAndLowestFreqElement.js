@@ -44,8 +44,7 @@ function findHighestAndLowestFreqElementUsingMap(arr){
     let freqMap = {};
     for(let i=0; i<arr.length; i++){
         freqMap[arr[i]] = (freqMap[arr[i]] || 0 ) +1;
-    }
-    
+    }   
     let maxFreq=0;
     let minFreq= Infinity;
     let maxEle=null;
