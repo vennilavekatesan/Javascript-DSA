@@ -29,3 +29,15 @@ console.log(maxConsecutiveOnes([1,0,1,1,0,1])); //2
 // i=4, count=2, max=2
 // i=5, count=3, max=3
 // return 3
+
+
+function cumulativeSum(arr){
+    let result=[];
+    let sum=0;
+    for(let i=0; i<arr.length; i++){
+        sum+=arr[i];
+        result.push(sum);
+    }
+    return result;
+}
+

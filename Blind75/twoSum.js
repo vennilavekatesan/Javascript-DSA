@@ -1,3 +1,15 @@
+function twoSumBruteForce(nums, target){
+    let n=nums.length;
+    for(let i=0; i<n; i++){
+        for(let j=i+1;j<n;j++){
+            if(nums[i]+nums[j]===target){
+                return [i,j];
+            }
+        }
+    }
+}
+
+
 const twoSum = (nums, target)=>{
     const numMap = new Map();
     for(let i=0; i<nums.length; i++){

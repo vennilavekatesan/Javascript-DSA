@@ -34,5 +34,22 @@ console.log(findMissingNumber2([9,6,4,2,3,5,7,0,1])); // 8
 // time complexity o(n)
 // space complexity o(n) for set approach
 
-// another approach 
+// another approach xor
+function findMissingNumber3(arr){
+    let n= arr.length
+    let xor1=0; 
+    let xor2=0;
+    for(let i=0; i<n; i++){
+        xor1= xor1 ^ arr[i];
+    }
+    for(let i=0 ; i<=n; i++){
+        xor2=xor2^i;
+    }
+     
+    return xor1 ^ xor2;
+}
+
+
+let arr=[3,0,1];
+console.log(findMissingNumber3(arr)); //2
  

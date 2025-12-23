@@ -44,3 +44,41 @@ for(let i=0; i<nums.length; i++){
    return nums;
 
 }
+//dry run
+let nums=[1,2,3,4,0,5,6,0];
+console.log(moveZeroes2(nums)); // [1,2,3,4,5,6,0,0]
+
+// i=0, j=0;
+// nums[i]=1 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,0,5,6,0]
+// j=1
+
+// i=1, j=1
+// nums[i]=2 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,0,5,6,0]
+// j=2
+
+// i=2, j=2
+// nums[i]=3 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,0,5,6,0]
+// j=3
+
+// i=3, j=3
+// nums[i]=4 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,0,5,6,0]
+// j=4
+
+// i=4, j=4
+// nums[i]=0 ==0
+// do nothing
+
+// i=5, j=4
+// nums[i]=5 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,5,0,6,0]
+// j=5
+
+// i=6, j=5
+// nums[i]=6 !=0
+// swap nums[i] and nums[j] => [1,2,3,4,5,6,0,0]
+// j=6
+
