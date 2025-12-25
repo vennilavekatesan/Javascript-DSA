@@ -60,6 +60,7 @@ console.log(leftRotateArrayByDPlaces(arr1, d1)); // [3,4,5,6,7,1,2]
     //temp=arr1[0]=1;
     //arr1[0] = arr1[1] = 1=2
     //arr1[1] = temp = 1
-    
 
 
+// time complexity - o(n)
+// space complexity - o(1)  because we are not using any extra space

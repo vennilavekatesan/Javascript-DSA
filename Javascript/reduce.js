@@ -20,3 +20,19 @@ const groupedProducts = products.reduce((productgrp, product)=>{
 
 
 console.log(groupedProducts);
+
+
+// basic method without reduce
+
+const products2 = {};
+products.forEach((product)=>{
+    const name=product.name;
+    if(products2[name]){
+        products2[name].push(product);
+    }
+    else{
+        products2[name]=[product];
+    }
+})
+
+console.log(products2);
