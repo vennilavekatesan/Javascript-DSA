@@ -16,9 +16,11 @@ Function.prototype.myBind= function(context={}, ...args){
    if(typeof this !=='function'){
       throw new TypeError('not a function');
    }
-   context.fn=this;
-   return function(...newArgs){      // this newArgs is for this args bindSpecs('Black', 700000)
-      context.fn(...args, ...newArgs);
+
+   let originalFunc = this;   // bind don't modify the context function, so we store the original function
+
+   return function(...innerArgs){
+      return originalFunc.apply(context, [...args, ...innerArgs])
    }
 }
 

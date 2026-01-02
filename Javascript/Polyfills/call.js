@@ -14,9 +14,11 @@ Function.prototype.myCall= function(context={}, ...args){
      if(typeof this !== 'function'){
         throw new TypeError('Not a function');
      }
-    context.fn = this; // assign the function to be called as a property of the context object
-    context.fn(...args)
-    
+     let key= Symbol('fn');
+     context[key]=this;
+     const result= context[key](...args);
+     delete context[key];
+     return result;
 }
 
 carDetails.myCall(car, 'Red', 300000); // Car Details: Toyota Camry 2020 Color: Red Price: 300000

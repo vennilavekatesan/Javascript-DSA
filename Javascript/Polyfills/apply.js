@@ -18,8 +18,11 @@ Function.prototype.myapply= function(context={}, args=[]){
     if(!Array.isArray(args)){
         throw new TypeError('CreateListFromArrayLike called on non-object');
     }
-    context.fn=this;
-    context.fn(...args);
+    let key = Symbol('fn');
+    context[key]=this;
+    let result= context[key](...args);
+    delete context[key];
+    return result;
 }
 
 
