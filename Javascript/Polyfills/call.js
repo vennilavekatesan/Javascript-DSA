@@ -22,3 +22,18 @@ Function.prototype.myCall= function(context={}, ...args){
 }
 
 carDetails.myCall(car, 'Red', 300000); // Car Details: Toyota Camry 2020 Color: Red Price: 300000
+
+
+Function.prototype.polyCall= function(context={}, ...args){
+  if(typeof this !== 'function'){
+    throw new TypeError('not a function');
+  }
+
+  let key= Symbol('fn');
+  context[key] = this; 
+  const result = context[key](...args);
+  delete context[key];
+  return result;
+}
+
+carDetails.polyCall(car, 'Red',2000);
