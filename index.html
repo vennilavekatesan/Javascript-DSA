@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        div{
+            min-width: 100px;
+            min-height:100px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>
     <title>Document</title>
 </head>
 <body>
@@ -11,8 +19,31 @@
     <script src="Javascript/reduce.js"> </script>
     <script src="Blind75/twoSum.js"> </script> -->
     <!-- <script src="Strings/removeOutermostParanthisis.js"> </script> -->
-     
+
+    // event delegation
+        <ul id="catagory">
+            <li id="laptop">laptop</li>
+            <li id="mobile">mobile</li>
+            <li id="tablet">tablet</li>
+        </ul>
+
+   /* event bubbling */
+    <div id="grantparent">
+        grantarent
+        <div id="parent">
+                parent
+            <div id="child">
+                child
+            </div>
+        </div>
+    </div>
+
+     //debounce
      <input type="text" onkeyup="betterFunction()">
-     <script src="Javascript/Polyfills/throttle.js" ></script>
+     <script src="Javascript/EventDelegation/bubbling.js" ></script>
+     <script src="Javascript/Polyfills/debounce.js" ></script>
+     <script src="/Strings/validPalindrom.js" ></script>
+     
+     <button onclick="betterFunction()">Click me</button>
 </body>
 </html>

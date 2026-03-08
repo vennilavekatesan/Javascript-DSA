@@ -11,6 +11,8 @@ function job(state){
     })
 }
 
+
+
 let promise = job(true);
 
 promise

@@ -11,6 +11,21 @@ const BubbleSort=(arr)=>{
     return arr;
 }
 
+const bubbleSort2=(arr)=>{
+ let n=arr.length;
+ for(let i=n-1; i>=1; i--){
+    let didSwap=0
+    for(let j=0;j<=i-1; j--){
+        if(arr[j]>arr[j+1]){
+            [arr[j],arr[j+1]]=[arr[j+1],arr[j]]
+            didSwap=1
+        }
+        
+    }
+ }
+ return arr;
+}
+
 let arr= [64,34,25,12,22,11,90];
 console.log(BubbleSort(arr)); // [11,12,22,25,34,64,90]
 

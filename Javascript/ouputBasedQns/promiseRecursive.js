@@ -20,13 +20,16 @@ function recursivePromise(promises){
     if(promises.length === 0){
         return;
     }
-    const currentPromise = promise.shift(); // it will remove the first promise from the array
+    const currentPromise = promises.shift(); // it will remove the first promise from the array
     currentPromise.then((res)=>{
         console.log(res);
+        recursivePromise(promises); // recursive call
     }).catch((err)=>{
         console.log(err);
+        recursivePromise(promises); // recursive call
     });
-    recursivePromise(promises); // recursive call
+    
+    
 }
 
 recursivePromise([
